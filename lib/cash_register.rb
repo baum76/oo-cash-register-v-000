@@ -1,6 +1,5 @@
 class CashRegister
-  attr_accessor :total, :discount, :name, :price, :quanitity, :item, :last
-
+  attr_accessor :total, :discount, :name, :price, :quanitity, :item
   def initialize(discount=0)
     @total = 0
     @discount = discount
@@ -29,7 +28,7 @@ class CashRegister
     item_names = []
     @cart.each do |item_info|
       quantity = item_info[:quantity]
-      quantity.times do 
+      quantity.times do
       item_names << item_info[:name]
     end
       end
@@ -37,7 +36,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    
+
   end
 
 end
